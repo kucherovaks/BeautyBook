@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeautyBook — онлайн-запись</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#" onclick="showPage('home'); return false;"><span>✿</span> BeautyBook</a>
+      <nav>
+        <a href="#" onclick="showPage('home'); return false;">Главная</a>
+        <a href="#" onclick="showPage('services'); return false;">Услуги</a>
+        <a href="#" onclick="showPage('specialists'); return false;">Специалисты</a>
+        <a href="#" onclick="showPage('about'); return false;">О салоне</a>
+        <a href="#" onclick="showPage('contacts'); return false;">Контакты</a>
+      </nav>
+      <button class="icon-btn" onclick="showPage('cabinet')" aria-label="Личный кабинет" title="Личный кабинет">⌾</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <div id="toast" class="toast"></div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
